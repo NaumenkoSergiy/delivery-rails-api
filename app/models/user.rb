@@ -7,5 +7,6 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
 
   has_many :favorited_products
+  has_many :favorite_products, through: :favorited_products, source: :product
   has_many :orders
 end

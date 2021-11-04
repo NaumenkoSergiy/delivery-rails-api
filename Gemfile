@@ -6,6 +6,7 @@ ruby '3.0.2'
 gem 'bcrypt', '3.1.7'
 gem 'bootsnap', '1.9.1', require: false
 gem 'devise_token_auth'
+gem 'faker'
 gem 'pg', '1.2.3'
 gem 'puma', '5.5.2'
 gem 'rack-cors'

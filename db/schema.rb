@@ -22,8 +22,12 @@ ActiveRecord::Schema.define(version: 2021_11_04_133602) do
   end
 
   create_table "favorited_products", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_favorited_products_on_product_id"
+    t.index ["user_id"], name: "index_favorited_products_on_user_id"
   end
 
   create_table "order_items", force: :cascade do |t|
