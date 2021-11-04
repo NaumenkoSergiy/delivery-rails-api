@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   end
 
   namespace :v1 do
-    resources :products, only: :index
+    resources :products, only: :index do
+      resource :favorite, only: [:create, :destroy]
+    end
   end
 end
