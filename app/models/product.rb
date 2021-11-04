@@ -7,4 +7,7 @@ class Product < ApplicationRecord
   scope :filter_by_category, ->(category_id) do
     joins(:category).where('categories.id = ?', category_id) if category_id
   end
+  scope :filter_by_name, ->(name) do
+    where('name ILIKE ?', "#{name}%") if name
+  end
 end
