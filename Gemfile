@@ -3,10 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.2'
 
+gem 'active_model_serializers'
+gem 'api-pagination'
 gem 'bcrypt', '3.1.7'
 gem 'bootsnap', '1.9.1', require: false
+gem 'decent_exposure'
 gem 'devise_token_auth'
 gem 'faker'
+gem 'kaminari'
 gem 'pg', '1.2.3'
 gem 'puma', '5.5.2'
 gem 'rack-cors'
