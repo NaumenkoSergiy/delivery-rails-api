@@ -1,9 +1,14 @@
-user = User.find_or_create_by!(
+user = User.find_by(
   name: 'Test User',
   email: 'test@email.com'
-) do |u|
-  u.password = 'password',
-  u.password_confirmation = 'password'
+)
+unless user
+  user = User.create!(
+    name: 'Test User',
+    email: 'test@email.com',
+    password: 'password',
+    password_confirmation: 'password'
+  )
 end
 
 (1..20).each do |id|
