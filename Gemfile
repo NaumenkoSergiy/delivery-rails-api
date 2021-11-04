@@ -18,6 +18,10 @@ gem 'rails', '6.1.4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.6'
+  gem 'faker'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
 end
 
 group :development do
