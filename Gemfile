@@ -5,7 +5,7 @@ ruby '3.0.2'
 
 gem 'active_model_serializers'
 gem 'api-pagination'
-gem 'bcrypt', '3.1.7'
+gem 'bcrypt', '3.1.16'
 gem 'bootsnap', '1.9.1', require: false
 gem 'decent_exposure'
 gem 'devise_token_auth'
