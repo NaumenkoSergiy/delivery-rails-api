@@ -1,5 +1,9 @@
 class V1::ProductsController < ApplicationController
-  expose :products, -> { Product.all.includes(:category).page(params[:page] || 0) }
+  expose :products, -> do
+    Product.includes_associations
+           .filter_by_category(params[:category_id])
+           .page(params[:page] || 0)
+  end
 
   def index
     render json: products
