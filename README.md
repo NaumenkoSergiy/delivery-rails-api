@@ -29,8 +29,8 @@ git clone git@github.com:NaumenkoSergiy/delivery-rails-api.git
 Run the following commands to create and setup the database.
 
 ```ruby
-bundle exec rake db:create
-bundle exec rake db:setup
+bundle exec rails db:create
+bundle exec rails db:setup
 ```
 
 ##### 4. Start the Rails server
